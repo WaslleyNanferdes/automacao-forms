@@ -15,18 +15,18 @@ def open_browser(driver, url):
     driver.get(url)
     driver.maximize_window()
 
-    """
-    FUnção para preencher os campos do formulário
-    
-    Parâmetros:
-    - driver: qual navegador vai ser usado
-    - xpath_list: lista de xpath's dos campos a serem usados
-    - sheet: planilha a ser usada
-    - sheet_columns: colunas da planilha
-    - url: url do formulário para ser recarregado sempre que for completo
-    - wait: VALOR OPICIONAL, define o tempo de espera para encontrar cada elemento,
-        se não for informado um valor, o padrão será 20
-    """
+"""
+FUnção para preencher os campos do formulário
+
+Parâmetros:
+- driver: qual navegador vai ser usado
+- xpath_list: lista de xpath's dos campos a serem usados
+- sheet: planilha a ser usada
+- sheet_columns: colunas da planilha
+- url: url do formulário para ser recarregado sempre que for completo
+- wait: VALOR OPICIONAL, define o tempo de espera para encontrar cada elemento,
+    se não for informado um valor, o padrão será 20
+"""
 def fill_fields(driver, xpath_list, sheet, sheet_columns, url, wait = 20):
     for i in range(len(xpath_list)):
         for j, xpath in enumerate(xpath_list):
